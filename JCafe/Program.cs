@@ -7,15 +7,16 @@ namespace JCafe
     {
         static void Main(string[] args)
         {
-            Dictionary<string, List<Cafe>> CustNam= new Dictionary<string, List<Cafe>>();
-            string name, answer, food, drink = string.Empty, top = string.Empty;
-            double total, price;
-
+            //Declearing Variables
+            Dictionary<string, List<Cafe>> CustNam= new Dictionary<string, List<Cafe>>(); //Keep tack of each orders for each person
+            string name, answer, food, drink = string.Empty, toppings = string.Empty;
+            double total, price, amount = 0, sum = 0;
             Cafe C = new Cafe();
 
+            //Welcoming the user
             Console.WriteLine("**. **. **Welcome to Café Penguin**.**.** ");
-
-            //figure out how to add name into list
+            
+            //Loop until the user does not want to add another person 
             do
             {
                 Console.WriteLine("Please type in your name >.<");
@@ -23,10 +24,12 @@ namespace JCafe
                 C.CustName = name;
                 CustNam.Add(name, new List<Cafe>());
 
+                //Loop unil the user does not want to order any more food or drinks
                 do
                 {
                     total = 0;
-                    Console.WriteLine(C.FoodMenu());
+                    //Console.WriteLine(C.FoodMenu());
+                    C.FoodMenu();  
                     Console.WriteLine("What would you like to order: ");
                     answer = Console.ReadLine().ToLower();
                     food = answer;
@@ -36,41 +39,44 @@ namespace JCafe
                     answer = Console.ReadLine().ToLower();
                     if (answer == "yes")
                     {
-                        Console.WriteLine(C.DrinkMenu());
+                        C.DrinkMenu();
                         Console.WriteLine("What kind of drink would you like: ");
                         answer = Console.ReadLine().ToLower();
                         drink = answer;
                         price = C.CalculatePrice(answer);
                         total += price;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Cool beans! ");
-                    }
-                    Console.WriteLine("Would you like toppings with your drink: yes or no:");
-                    answer = Console.ReadLine().ToLower();
-                    if (answer == "yes")
-                    {
-                        Console.WriteLine(C.ToppingsMenu());
-                        Console.WriteLine("What kind of toppings would you like: ");
+                        Console.WriteLine("Would you like toppings with your drink: yes or no:");
                         answer = Console.ReadLine().ToLower();
-                        top = answer;
-                        price = C.CalculatePrice(answer);
-                        total += price;
+                        if (answer == "yes")
+                        {
+                            C.ToppingsMenu();
+                            Console.WriteLine("What kind of toppings would you like: ");
+                            answer = Console.ReadLine().ToLower();
+                            toppings = answer;
+                            price = C.CalculatePrice(answer);
+                            total += price;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Cool beans! ");
+                        }
                     }
                     else
                     {
                         Console.WriteLine("Cool beans! ");
                     }
+
+                    //Adding the user input to the variables in the class
                     C = new Cafe()
                     {
                         Food = food,
                         Drink = drink,
-                        Toppings = top,
+                        Toppings = toppings,
                         Amount = total,
                     };
+
+                    //Adding the user input to the dictionary
                     CustNam[name].Add(C); 
-                    //C.Amount = total;
                     
                     Console.WriteLine($"Would you like to order anything else: ");
                     answer = Console.ReadLine();
@@ -79,19 +85,25 @@ namespace JCafe
                 Console.WriteLine("Would you like to order for another person: ");
                 answer = Console.ReadLine();
             } while (answer.ToLower() == "yes");
-            //portion that would allow the food and drink menu
 
-
-            //output the receipt total and the user's name
-
+            //Looping through the  key in the dictionary
             foreach (var item in CustNam)
             {
+                //Reset the total when calcuating for the person
+                sum = 0;
                 Console.WriteLine($"{item.Key}'s order is:");
+
+                //Looping through the values at each key out put the user what they order and have a running total
                 for (int i = 0; i < item.Value.Count; i++)
                 {
                     Console.WriteLine(item.Value[i]);
-                    C.Receipt(item.Value[i]);
+                    amount = C.RunningTotal(item.Value[i]);
+                    sum += amount;
                 }
+
+                //Output grand total
+                C.Receipt(sum);
+                Console.WriteLine(); 
             }
         }
     }

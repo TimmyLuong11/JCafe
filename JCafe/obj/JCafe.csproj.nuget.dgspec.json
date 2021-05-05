@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kimlu\\source\\repos\\JCafe\\JCafe\\JCafe.csproj": {}
+    "C:\\Users\\Kimlu\\Source\\Repos\\TimmyLuong11\\JCafe\\JCafe\\JCafe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kimlu\\source\\repos\\JCafe\\JCafe\\JCafe.csproj": {
+    "C:\\Users\\Kimlu\\Source\\Repos\\TimmyLuong11\\JCafe\\JCafe\\JCafe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kimlu\\source\\repos\\JCafe\\JCafe\\JCafe.csproj",
+        "projectUniqueName": "C:\\Users\\Kimlu\\Source\\Repos\\TimmyLuong11\\JCafe\\JCafe\\JCafe.csproj",
         "projectName": "JCafe",
-        "projectPath": "C:\\Users\\Kimlu\\source\\repos\\JCafe\\JCafe\\JCafe.csproj",
+        "projectPath": "C:\\Users\\Kimlu\\Source\\Repos\\TimmyLuong11\\JCafe\\JCafe\\JCafe.csproj",
         "packagesPath": "C:\\Users\\Kimlu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kimlu\\source\\repos\\JCafe\\JCafe\\obj\\",
+        "outputPath": "C:\\Users\\Kimlu\\Source\\Repos\\TimmyLuong11\\JCafe\\JCafe\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kimlu\\AppData\\Roaming\\NuGet\\NuGet.Config",

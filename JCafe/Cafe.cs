@@ -6,6 +6,7 @@ namespace JCafe
 {
     class Cafe
     {
+        //Declaring the public and const variables
         const double taxrate = 0.055;
         public string CustName { get; set; }
         public string Food { get; set; }
@@ -13,6 +14,9 @@ namespace JCafe
         public string Toppings { get; set; }
         public double Amount { get; set; }
 
+        /// <summary>
+        /// The default constructor setting public variables to either empty string or 0
+        /// </summary>
         public Cafe()
         {
             CustName = string.Empty;
@@ -22,9 +26,12 @@ namespace JCafe
             Amount = 0;
         }
 
-        public string FoodMenu()
+        /// <summary>
+        /// Display the food menu
+        /// </summary>
+        public void FoodMenu()
         {
-            string food = (
+            Console.WriteLine(
                                "\n\tFood:" +
 
                                 "\n\tVietnamese Pizza------$10.00" +
@@ -33,12 +40,15 @@ namespace JCafe
 
                                 "\n\tEggrolls---------------$5.00" +
 
-                                "\n\tBanh Mi--------------$8.00");
-            return food;
+                                "\n\tBanh Mi--------------$8.00"); ;
         }
-        public string DrinkMenu()
+
+        /// <summary>
+        /// Display the drink menu
+        /// </summary>
+        public void DrinkMenu()
         {
-            string drink = (
+            Console.WriteLine(
                                "\n\tDrinks:" +
 
                                 "\n\tBrown Sugar Boba------$3.50" +
@@ -48,22 +58,24 @@ namespace JCafe
                                 "\n\tHoneydew Milk Tea------------$4.00" +
 
                                 "\n\tVietnamese Coffee----------$3.00");
-
-
-
-            return drink;
         }
-        public string ToppingsMenu()
-        {
-            string Tops =
 
-                            ("\n\tToppings:" +
+        /// <summary>
+        /// Display the toppings menu
+        /// </summary>
+        public void ToppingsMenu()
+        {
+            Console.WriteLine("\n\tToppings:" +
                             "\n\tTapioca----0.50" +
                             "\n\tJelly-----0.50" +
                             "\n\tPopping Boba---0.50");
-            return Tops;
         }
 
+        /// <summary>
+        /// Take the wanted item and find the price
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns>Return the price of the item</returns>
         public double CalculatePrice(string item)
         {
 
@@ -86,7 +98,7 @@ namespace JCafe
             }
             else if (item == "brown sugar boba")
             {
-                price = 4.00;
+                price = 3.50;
             }
             else if (item == "taro milk tea")
             {
@@ -114,24 +126,37 @@ namespace JCafe
             }
             return price;
         }
-        public void Receipt(Cafe subtotal)
+
+        /// <summary>
+        /// Calculate the total for each item
+        /// </summary>
+        /// <param name="subtotal"></param>
+        public void Receipt(double subtotal)
         {
-            double tax = subtotal.Amount * taxrate;
-            double total = tax + subtotal.Amount;
-            Console.WriteLine($"Subtotal of your item(s) is {subtotal.Amount.ToString("C")}");
+            double tax = subtotal * taxrate;
+            double total = tax + subtotal;
+            Console.WriteLine($"Subtotal of your item(s) is {subtotal.ToString("C")}");
             Console.WriteLine($"Tax of your item(s) is {tax.ToString("C")}");
             Console.WriteLine($"Total  of your item(s) is {total.ToString("C")}");
         }
-        public string DisplayOrder(string item)
-        {
-            //Console.WriteLine($"You ordered:\n{item}");
-            return ($"You ordered:\n{item}");
-            //return $"{item.Food} \n{item.Drink} \n{item.Toppings}";
-        }
-
+        
+        /// <summary>
+        /// Output the string of orders
+        /// </summary>
+        /// <returns>The string of orders</returns>
         public override string ToString()
         {
             return $"{Food} \n{Drink} \n{Toppings}";
+        }
+
+        /// <summary>
+        /// Gets the amount when looping through the key values
+        /// </summary>
+        /// <param name="subtotal"></param>
+        /// <returns>The cost of each item</returns>
+        public double RunningTotal(Cafe subtotal)
+        {
+            return subtotal.Amount;
         }
     }
 }
