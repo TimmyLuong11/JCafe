@@ -10,3 +10,4 @@ C:\Users\Kimlu\source\repos\JCafe\JCafe\obj\Debug\netcoreapp3.1\JCafe.csproj.Cor
 C:\Users\Kimlu\source\repos\JCafe\JCafe\obj\Debug\netcoreapp3.1\JCafe.dll
 C:\Users\Kimlu\source\repos\JCafe\JCafe\obj\Debug\netcoreapp3.1\JCafe.pdb
 C:\Users\Kimlu\source\repos\JCafe\JCafe\obj\Debug\netcoreapp3.1\JCafe.genruntimeconfig.cache
+C:\Users\Kimlu\source\repos\JCafe\JCafe\obj\Debug\netcoreapp3.1\JCafe.csprojAssemblyReference.cache
