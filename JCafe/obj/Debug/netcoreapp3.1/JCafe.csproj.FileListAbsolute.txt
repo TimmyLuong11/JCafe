@@ -1,0 +1,12 @@
+C:\Users\Kimlu\source\repos\JCafe\JCafe\bin\Debug\netcoreapp3.1\JCafe.exe
+C:\Users\Kimlu\source\repos\JCafe\JCafe\bin\Debug\netcoreapp3.1\JCafe.deps.json
+C:\Users\Kimlu\source\repos\JCafe\JCafe\bin\Debug\netcoreapp3.1\JCafe.runtimeconfig.json
+C:\Users\Kimlu\source\repos\JCafe\JCafe\bin\Debug\netcoreapp3.1\JCafe.runtimeconfig.dev.json
+C:\Users\Kimlu\source\repos\JCafe\JCafe\bin\Debug\netcoreapp3.1\JCafe.dll
+C:\Users\Kimlu\source\repos\JCafe\JCafe\bin\Debug\netcoreapp3.1\JCafe.pdb
+C:\Users\Kimlu\source\repos\JCafe\JCafe\obj\Debug\netcoreapp3.1\JCafe.AssemblyInfoInputs.cache
+C:\Users\Kimlu\source\repos\JCafe\JCafe\obj\Debug\netcoreapp3.1\JCafe.AssemblyInfo.cs
+C:\Users\Kimlu\source\repos\JCafe\JCafe\obj\Debug\netcoreapp3.1\JCafe.csproj.CoreCompileInputs.cache
+C:\Users\Kimlu\source\repos\JCafe\JCafe\obj\Debug\netcoreapp3.1\JCafe.dll
+C:\Users\Kimlu\source\repos\JCafe\JCafe\obj\Debug\netcoreapp3.1\JCafe.pdb
+C:\Users\Kimlu\source\repos\JCafe\JCafe\obj\Debug\netcoreapp3.1\JCafe.genruntimeconfig.cache
